@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<!-- __________________________________________________________________________________________ -->
+<!-- _____________________________________________ Global site tag (gtag.js) - Google Analytics -->
+
+<script async="" src="js/js.js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-10301455-3');
+
+    function saveGA(action, label, category) {
+
+        /*
+        // https://developers.google.com/analytics/devguides/collection/gtagjs/events
+        <action> is the string that will appear as the event action in Google Analytics Event reports.
+        <category> is the string that will appear as the event category.
+        <label> is the string that will appear as the event label.
+        <value> is a non-negative integer that will appear as the event value.
+        Exemple :
+        saveGA('click_bt_footer', 'From footer', 'click')
+        saveGA('open_popup_get_full_app', 'From home btV5', 'open_popup')
+        saveGA('open_popup_video', 'From goodies', 'open_popup')
+        */
+
+        gtag('event', action, {
+            'event_category': category,
+            'event_label': label
+        });
+    }
+</script>
+
+<html lang="en">
+
+
+
+<meta charset="UTF-8">
+<title>Incredibox - Express your musicality!</title>
+<meta name="description"
+    content="Incredibox is a music app for creating your own music with the help of a merry band of beatboxers. Part game, part tool, Incredibox is above all an audio and visual experience that introduces kids and adults to notions of rhythm and melody. Pump it up and chill!">
+<meta name="keywords"
+    content="musical app, online beatmaker, create mix, record mix, flash music app, beat-box, beatbox, DIY beatbox, music game, music sequencer, music toy">
+<meta name="author" content="So Far So Good">
+
+<!--  + + + + + + + + + + + + + + + + + + +   POWERED by INCREDIBOX   + + + + + + + + + + + + + + + + + + + + + +
+                + + + + + + + + + + + + + + + + + + + + +  Incredibox © So Far So Good  + + + + + + + + + + + + + + + + + + + + +
+                + + + + + + + + + + + + + + + + + + + + +   http://www.sofarsogood.fr   + + + + + + + + + + + + + + + + + + + + +
+
+
+                                                            DMMMMMMMMMMMMMMMMMMMMM~  .                        
+                                                      . 8MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM,                      
+                                                  . .DMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$                   
+                                                  .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMD                 
+                                                 NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM~               
+                                               :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.             
+                                              MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM             
+                                             MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM .          
+                                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM           
+                                         . MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM .        
+                                         .7MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM          
+                                          MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.        
+                                        .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM7        
+                                        .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM        
+                                       .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM        
+                                      ..MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM~.      
+                                       .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN    MMMMMMMMM       
+                                      .ZMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=MMMMMMMMMMMMO. ..  .MMMMMMMMM       
+                                       MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+. MMMMMMMMMM           MMMMMMMMM       
+                                      .MMMMMMMMMMMMMMMMMMMMMMMMMMMN    MMMMMMMD .            .MMMMMMMMM       
+                                       MMMMMMMMMMMMMMMMMMMMMMMM7   ...MMMM? . .  .           .MMMMMMMMM,      
+                                      .MMMMMMMMMMMMMMMMMMMN.. .      . . .                    MMMMMMMMMM      
+                                    . DMMMMMMMMMMMMMD..                     .   ...    .      MMMMMMMMMM      
+                                    :MMMMMMMMMMM=          . .   . .      $MMMMMMMMMMMMM~.    MMMMMMMMMMD     
+                                   8MMMMMMMMMMMM            ,+ODNDZI      NMMMMMMMMMNNMMMMMMN MMMMMMMMMMM     
+                                .,MMD,MMMMMMMMMM       ZMMMMMMMMMMMM      MM?.  ....         .MMMMMMMMMMM$    
+                                     .MMMMMMMMMM.   ,MMMMMMMMMMD=OMM          :MMMMMMMD  .    MMMMMMMMMMMM.   
+                                     .MMMMMM MMMMMMMO~M7 ..   . DM..        MM.  . ..  DM.    MMM DMMMMMMMO   
+                                    .OMMMMM: .MM ...M$.       .   M:      .M .        . .M?   MM...MMMMMMMM~  
+                                    .MMMMMM= NMM   MN.           ..M      M.             .M  .MMZ  MMMM ?MMM  
+                                   ..MMMMMMM .?M.  M . .      ...   N. . 7,    .  .   ..  :D  MN..OMMMM  .DMN.
+                                    MMMMMMMM 8 M.  MMMMMMMMMMMMMMMMMM . .MMMMMMMMMMMMMMMMMMM  M:7 MMMMM+  ....
+                                   :MMMMMMMMO. MI. MI..?MMMMMMM ..7MM .. MM.  NMMMMMMM...8M. .M  :MMMMMM      
+                                ..=MMMMMMMMMM  ~M  OM.  ZMMMMM    M8M=   NMN. .MMMMMM.. +M   MDI.MMMMMMM.     
+                                ..MMMMMMMMMMMD.,MZ .OM . ....   .MD MO . DDMZ  .    .  ,MZ   M$ ?MMMMMMM      
+                                :MMMMMMMMMMMMMM MM    MM?.    ?MM.  MM  .M?.DMM..  . OMM....IM.8MMMMMMMM.     
+                              .MMMM, MMMMMMMMMMMNM?   .. 8MMMD...  .$M.. M. .. ?MMMMD .     MMMMMMMMMMMM..    
+                                  .IMMMMMMMMMMMMMMM                 :M   M                 MMMMMMMMMMMMM.     
+                                 ,MMMMMMMMMMMMMMMMM                ..M. .M.                MMMMMMMMMMMMM      
+                               ?MMMMMM7  +MMMMMMMMM                . M   M                .MMMMMMMMMMMM?      
+                                          MMMMMMMMM                  M   M                ZMMMMMMMMMMMM.      
+                                          MMMMMMMMM                  M   M               .MMMMMMMMMMMMM       
+                                         .+MMMMMMMM                 .M   M               .MMMMMMMMMMMM        
+                                           MMMMMMMM                OZM...M.               MMMMMMMMMMMM..      
+                                           $MMMMMMM .              M M  .MN               MMMMMMMMMMM         
+                                           .MMMMMMM,.              I7M. .MM               MMMMMMMMMM .        
+                                             MMMMMMM .   ,NMMMMMMMMMMM:  MMMMM8          8MMMMMMMMM=          
+                                             ,MMMMMMMMMMN, .       . MZ..M. ..$MMM:  . ..MMMMMMM MM.          
+                                              DMMMMMM8MMMMMM8+       .M .N.  ..  +MMM=..MMMMMMM8 M..          
+                                                M?MMMM..     :DMMMMMMDM. N8MMMMMMMMMMMMMMMM.MM....            
+                                                    MMMN            ?MMMMMM8.   . .  .MMMD.~Z .               
+                                                      ~MM                          ..MM:                      
+                                                      ..ZMM                        MM8  .                     
+                                                        . MMM . .             ..=MMM                          
+                                                           NMMMM:..... .. . .ZMMMM7                           
+                                                          . 8MMMMMMMM8ZODMMMMMMMM...                          
+                                                            ..MM. 8MMMMMMMMI.MM+.                             
+                                                               IMM . ...   MMI..                              
+                                                                 IMM8.  ZMMO..                                
+                                                                   ,MMMMM: .
+
+
+                + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+                + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+                + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + -->
+
+<meta property="og:title" content="Incredibox - Express your musicality!">
+<meta property="og:description"
+    content="Incredibox is a music app for creating your own music with the help of a merry band of beatboxers. Part game, part tool, Incredibox is above all an audio and visual experience that introduces kids and adults to notions of rhythm and melody. Pump it up and chill!">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/fb-incredibox.jpg">
+
+<link href="css/index.css" rel="stylesheet">
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link href="css/css_1.css" rel="stylesheet" type="text/css">
+<link href="img/favicon.ico" type="image/ico" rel="icon">
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/EasePack.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript">
+
+    var flashversion = "9.0.0";
+    var domain = "https://www.incredibox.com/";
+    var versionIE = 0;
+
+    $(document).ready(function () {
+        init();
+        initHome();
+    });
+
+</script>
+</head>
+
+<body>
+
+    <noscript>
+        <div id="info-js">
+            <p>You have to enable JavaScript in your browser settings to access this website</p>
+        </div>
+    </noscript>
+
+    <div id="bbox">
+
+        <div id="bbox-fd"></div>
+
+        <div id="bbox-body">
+
+            <div id="bbox-click"></div>
+            <!-- ______________________________________________________________ -->
+            <!-- _____________________________________________ POPUP INVITATION -->
+
+            <div class="popup" id="box-mail">
+                <div class="popup-head">
+                    <span>Send Incredibox to a friend</span>
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body">
+
+                    <form action="javascript:sendInvitation()" id="form-mail" method="post" target="_self">
+                        <input type="text" name="name" id="mail-name" maxlength="20" placeholder="Enter your name *"><!--
+				 --><input type="text" name="email" id="mail-email" maxlength="254"
+                            placeholder="Enter your friend email address *">
+                        <input type="submit" class="btround bt-send" id="bt-send-mail" value="Send">
+                        <div class="popup-alert" id="alert-mail"></div>
+                        <div class="clear"></div>
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- ______________________________________________________________ -->
+            <!-- _____________________________________________ POPUP NEWSLETTER -->
+
+            <div class="popup" id="box-news">
+                <div class="popup-head">
+                    Subscribe to our newsletter
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body">
+
+                    <form action="javascript:subscriptionNews()" id="form-news" method="post" target="_self">
+                        <input type="text" name="name" id="news-name" required="" maxlength="20"
+                            placeholder="Your name *"><!--
+				 --><input type="text" name="email" id="news-email" required="" maxlength="254" placeholder="Your email address *">
+                        <input type="submit" class="btround bt-send" id="bt-send-news" value="Subscribe">
+                        <div class="popup-alert" id="alert-news"></div>
+                        <div class="clear"></div>
+                    </form>
+                    <p>We hate SPAM as much as you do. By subscribing you will only receive news from Incredibox. <a
+                            href="https://www.incredibox.com/info/privacy" target="_blank">Privacy policy</a></p>
+                </div>
+            </div>
+
+            <!-- ______________________________________________________________ -->
+            <!-- _____________________________________________ POPUP NEWSLETTER -->
+
+            <div class="popup" id="box-app">
+                <div class="popup-close"></div>
+                <div class="popup-body v5">
+                    <div id="head-banner"></div>
+                    <div id="packshot"></div>
+                    <a href="https://standards.aasl.org/project/ba18/" target="_blank" id="award"></a>
+                    <div class="box-bt-store mini-bt-store">
+                        <a href="https://itunes.apple.com/app/id1093131935" target="_blank" class="bt-store"
+                            id="bt-appstore"
+                            onclick="saveGA('click_bt_appstore', 'Click from popup get full app', 'click_bt_store');"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.sofarsogood.incredibox"
+                            target="_blank" class="bt-store" id="bt-playstore"
+                            onclick="saveGA('click_bt_playstore', 'Click from popup get full app', 'click_bt_store');"></a>
+                        <a href="https://www.amazon.fr/So-Far-Good-Incredibox/dp/B07BKZCDHT/" target="_blank"
+                            class="bt-store" id="bt-amazon"
+                            onclick="saveGA('click_bt_amazon', 'Click from popup get full app', 'click_bt_store');"></a>
+                        <a href="https://itunes.apple.com/app/id1437906083" target="_blank" class="bt-store"
+                            id="bt-macappstore"
+                            onclick="saveGA('click_bt_macappastore', 'Click from popup get full app', 'click_bt_store');"></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    <!-- ____________________________________________________ -->
+    <!-- _____________________________________________ HEADER -->
+    <div id="menu">
+        <!-- _____________________________ MENU -->
+        <div id="hd-left">
+            <a href="index.html" id="bt1" class="lien">
+                <div class="title">Incredibox</div>
+                <div class="picto"></div>
+            </a>
+
+
+            <a href="https://www.incredibox.com/playlist" id="bt2" class="lien">
+                <div class="box-bt">
+                    <div class="picto"></div>
+                    <div class="title">Top 50</div>
+                </div>
+            </a>
+            <a href="https://www.incredibox.com/wallpaper" id="bt3" class="lien">
+                <div class="box-bt">
+                    <div class="picto"></div>
+                    <div class="title">Goodies</div>
+                </div>
+            </a>
+            <a href="https://www.incredibox.com/url/shop" id="bt4" target="_blank" class="lien">
+                <div class="box-bt">
+                    <div class="picto"></div>
+                    <div class="title">Shop</div>
+                </div>
+            </a>
+
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- _____________________________________________________ -->
+    <!-- _____________________________________________ CONTENT -->
+    <div id="wrap" class="home">
+
+        <div class="head">
+            <div class="middle">
+                <div id="head-title">
+                    <h1>Incredibox</h1>
+                    <p>Express your musicality!</p>
+                </div>
+            </div>
+
+            <a href="https://itunes.apple.com/app/id1093131935" target="_blank" class="bt-store" id="bt-appstore"
+                onclick="saveGA('click_bt_appstore', 'Click from header', 'click_bt_store');"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.sofarsogood.incredibox" target="_blank"
+                class="bt-store" id="bt-playstore"
+                onclick="saveGA('click_bt_playstore', 'Click from header', 'click_bt_store');"></a>
+        </div>
+
+        <!-- _____________________________________________ SELECT VERSION -->
+        <div class="accroche middle white">
+            <span>Select a version to start mixing music</span>
+            <div class="lineP"><span class="trait"></span><span class="pointe"></span><span class="trait"></span></div>
+        </div>
+
+        <div id="select" class="middle">
+            <a href="./v1/index.html" class="game" id="appv1">
+
+                <div class="rond">
+                    <div class="icon"></div>
+                </div>
+                <div class="p1"><span>V1</span></div>
+                <div class="info">
+                    <div class="title">Alpha</div>
+                    <div class="year">2009</div>
+                </div>
+                <div class="play">Create<br>your mix</div>
+            </a>
+            <a href="./v2/index.html" class="game" id="appv2">
+                <div class="rond">
+                    <div class="icon"></div>
+                </div>
+                <div class="p1"><span>V2</span></div>
+                <div class="info">
+                    <div class="title">Little miss</div>
+                    <div class="year">2012</div>
+                </div>
+                <div class="play">Create<br>your mix</div>
+            </a>
+            <a href="./v3/index.html" class="game" id="appv3">
+                <div class="rond">
+                    <div class="icon"></div>
+                </div>
+                <div class="p1"><span>V3</span></div>
+                <div class="info">
+                    <div class="title">Sunrise</div>
+                    <div class="year">2013</div>
+                </div>
+                <div class="play">Create<br>your mix</div>
+            </a>
+            <a href="./v4/index.html" class="game" id="appv4">
+                <div class="rond">
+                    <div class="icon"></div>
+                </div>
+                <div class="p1"><span>V4</span></div>
+                <div class="info">
+                    <div class="title">The love</div>
+                    <div class="year">2014</div>
+                </div>
+                <div class="play">Create<br>your mix</div>
+            </a>
+            <div onclick="saveGA('open_popup_get_app', 'Click btV5 sur home', 'open_popup'); openPopup('box-app', 'v5');"
+                class="game" id="appv5">
+                <div class="rond">
+                    <div class="icon"></div>
+                </div>
+                <div class="p1"><span>V5</span></div>
+                <div class="info">
+                    <div class="title">Brazil</div>
+                    <div class="year">2016</div>
+                </div>
+                <div class="play">Get the<br>full app</div>
+            </div>
+            <div onclick="saveGA('open_popup_get_app', 'Click btV6 sur home', 'open_popup'); openPopup('box-app', 'v6');"
+                class="game" id="appv6">
+                <div class="rond">
+                    <div class="icon"></div>
+                </div>
+                <div class="p1"><span>V6</span></div>
+                <div class="info">
+                    <div class="title">Alive</div>
+                    <div class="year">2018</div>
+                </div>
+                <div class="play">Get the<br>full app</div>
+            </div>
+        </div>
+
+        <center><p style="font-size: 24px;">DISCLAIMER: This is a fan recreation. I do not own the rights to Incredibox, all rights go to <u><a href="https://sofarsogood.fr">So Far So Good</a></u>.</p></center>
+        <br>
+
+
+        <!-- _____________________________________________ BT-STORE -->
+
+        <div class="all-bt-store">
+            <div class="middle">
+                <div class="box-bt-store">
+                    <a href="https://itunes.apple.com/app/id1093131935" target="_blank" class="bt-store"
+                        id="bt-appstore"
+                        onclick="saveGA('click_bt_appstore', 'Click from popup get full app', 'click_bt_store');"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.sofarsogood.incredibox" target="_blank"
+                        class="bt-store" id="bt-playstore"
+                        onclick="saveGA('click_bt_playstore', 'Click from popup get full app', 'click_bt_store');"></a>
+                    <a href="https://www.amazon.fr/So-Far-Good-Incredibox/dp/B07BKZCDHT/" target="_blank"
+                        class="bt-store" id="bt-amazon"
+                        onclick="saveGA('click_bt_amazon', 'Click from popup get full app', 'click_bt_store');"></a>
+                    <a href="https://itunes.apple.com/app/id1437906083" target="_blank" class="bt-store"
+                        id="bt-macappstore"
+                        onclick="saveGA('click_bt_macappastore', 'Click from popup get full app', 'click_bt_store');"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- _____________________________________________ BLOC STATS -->
+
+        <div id="stats">
+
+            <div class="accroche middle">
+                <span>About Incredibox</span>
+                <div class="lineP"><span class="trait"></span><span class="pointe"></span><span class="trait"></span>
+                </div>
+            </div>
+
+            <div class="middle">
+
+                <!-- [ 02 Dec 2018 02:20:04 ] -->
+                <div class="mini-box" id="nb-rec">
+                    <div class="picto"></div>
+                    <div class="number">4.95 M</div>
+                    <div class="text">mix recorded</div>
+                </div>
+                <div class="mini-box" id="nb-fan">
+                    <div class="picto"></div>
+                    <div class="number">412 K</div>
+                    <div class="text">on facebook</div>
+                </div>
+                <div class="mini-box" id="nb-play">
+                    <div class="picto"></div>
+                    <div class="number">45 M</div>
+                    <div class="text">users since 2009</div>
+                </div>
+            </div>
+
+            <div class="bio middle">
+                <p>Incredibox is a music app for creating your own music with the help of a merry band of beatboxers.
+                    Part game, part tool, Incredibox is above all an audio and visual experience that introduces kids
+                    and adults to notions of rhythm and melody.</p>
+                <p>Thanks to a smart mix of music, graphics, animation and interactivity, the app has rapidly gained
+                    popularity among people of all ages. And because it makes learning fun and entertaining, Incredibox
+                    is now used by teachers at school all over the world.</p>
+            </div>
+
+        </div>
+
+        <!-- _____________________________________________ BEST -->
+
+        <div id="best">
+            <div class="middle">
+                <div id="diapo-best">
+                    <div id="diapo-text">
+                        <div class="phrase">
+                            <div class="punchline">“...this site will give you that coolness you have always desired.”
+                            </div>
+                            <div class="author">ADOBE - Rob Ford - The Edge of Flash</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“This site is super crazy addicting.”</div>
+                            <div class="author">RYAN ESTRADA - @ryanestrada</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“I could spend hours on this #incredibox >> this is dangerous...”
+                            </div>
+                            <div class="author">LONDON BIKE KITCHEN - @LDNBikeKitchen</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“Wow, just wow! Incredibox is so well done and so much damn fun.”
+                            </div>
+                            <div class="author">BRIAN TALBOT - @talbs</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“Un grand classique du web !”</div>
+                            <div class="author">GAME ONE - Caroline Arrouet - Funky Web</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“Everyone has to try this, it's so cool... Incredibox! :D”</div>
+                            <div class="author">JAKE THOMPSON - @JakeTWiiN</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“With a bit of skill, you can make some pretty snazzy music...”</div>
+                            <div class="author">SOFTSONIC - Nick Mead - Features</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“The most Amazing site ever!!! having so much fun ahaha.”</div>
+                            <div class="author">MIA ROSE - @OfficialMiaRose</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“The greatest site you'll ever visit. Prepare to lose several hours a
+                                week...”</div>
+                            <div class="author">JAKE BLUNT - @JakeBlunt</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“A wonderfully surreal free online game...”</div>
+                            <div class="author">SLATE - Forrest Wickman - Browbeat blog</div>
+                        </div>
+                        <div class="phrase">
+                            <div class="punchline">“Damn this is addictive... I feel like a real artist, lol!”</div>
+                            <div class="author">YOUNESS ALAOUI - @KaKaRoToKS</div>
+                        </div>
+                    </div>
+                    <div class="nav noselect" id="nav-left"></div>
+                    <div class="nav noselect" id="nav-right"></div>
+                </div>
+                <div id="diapo-point" class="noselect"></div>
+            </div>
+        </div>
+
+        <!-- _____________________________________________ BIG FOLLOW -->
+
+        <div id="big-follow">
+            <div class="accroche middle">
+                <span>Stay tuned</span>
+                <div class="lineP"><span class="trait"></span><span class="pointe"></span><span class="trait"></span>
+                </div>
+            </div>
+            <div class="middle">
+                <a href="https://www.facebook.com/incredibox" target="blank" class="button" id="face">
+                    <div class="picto"></div>
+                    <div class="txt">Facebook</div>
+                </a>
+                <a href="https://twitter.com/incredibox_" target="blank" class="button" id="twit">
+                    <div class="picto"></div>
+                    <div class="txt">Twitter</div>
+                </a>
+                <a href="https://www.instagram.com/incredibox.official/" target="blank" class="button" id="inst">
+                    <div class="picto"></div>
+                    <div class="txt">Instagram</div>
+                </a>
+                <a href="https://www.youtube.com/c/incredibox" target="blank" class="button" id="yout">
+                    <div class="picto"></div>
+                    <div class="txt">Youtube</div>
+                </a>
+                <div onclick="openPopup('box-news')" class="button" id="news">
+                    <div class="picto"></div>
+                    <div class="txt">Newsletter</div>
+                </div>
+                <a href="shop" class="button" id="shop">
+                    <div class="picto"></div>
+                    <div class="txt">Shop</div>
+                </a>
+            </div>
+        </div>
+
+    </div><!-- div wrap -->
+
+    <!-- ____________________________________________________ -->
+    <!-- _____________________________________________ FOOTER -->
+    <div id="footer">
+        <!-- _____________________________ MENU FOOTER -->
+        <div class="middle">
+            <div class="box" id="left">
+                <a href="http://www.sofarsogood.fr/" target="_blank"
+                    onclick="saveGA('Footer left', 'Click bt copyright');">© So Far So Good</a>
+                <span></span>
+                <a href="./v0/index.html">Old version</a>
+                <span></span>
+                <a href="https://www.incredibox.com/info/privacy" target="_blank"
+                    onclick="saveGA('Footer left', 'Click bt Privacy');">Privacy</a>
+                <span></span>
+                <a href="https://www.incredibox.com/info/press" target="_blank"
+                    onclick="saveGA('Footer left', 'Click bt press');">Press kit</a>
+                <span></span>
+                <a href="https://www.incredibox.com/info/faq" target="_blank"
+                    onclick="saveGA('Footer left', 'Click bt FAQ');">Help</a>
+                <span></span>
+                <a href="https://www.incredibox.com/info/form" target="_blank"
+                    onclick="saveGA('Footer left', 'Click bt contact');">Contact us</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
