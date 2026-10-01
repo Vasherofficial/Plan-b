@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Powered by Incredibox
+	Incredibox © So Far So Good
+	http://www.sofarsogood.fr
+	http://www.incredibox.com
+-->
+<root>
+
+	<appInfo>
+		<name>Little Miss</name>
+		<version>2</version>
+		<annee>2012</annee>
+		<duree>4.78</duree>
+		<frame>232</frame>
+		<bonusloopA>true</bonusloopA>
+		<volencode>0.65</volencode>
+	</appInfo>
+
+	<musique>
+
+		<son picto="picto0" posPicto="49,73">
+			<swf>costume-v2/effet1_poulll.swf</swf>
+			<mp3>sound-v2/effets/effet1_poulll_a.mp3</mp3>
+			<mp3>sound-v2/effets/effet1_poulll_b.mp3</mp3>
+		</son>
+		<son picto="picto1" posPicto="49,73">
+			<swf>costume-v2/effet2_tucati.swf</swf>
+			<mp3>sound-v2/effets/effet2_tucati_a.mp3</mp3>
+		</son>
+		<son picto="picto2" posPicto="49,73">
+			<swf>costume-v2/effet3_tuilopta.swf</swf>
+			<mp3>sound-v2/effets/effet3_tuilopta_a.mp3</mp3>
+			<mp3>sound-v2/effets/effet3_tuilopta_b.mp3</mp3>
+		</son>
+		<son picto="picto3" posPicto="49,73">
+			<swf>costume-v2/effet4_tululou.swf</swf>
+			<mp3>sound-v2/effets/effet4_tululou_a.mp3</mp3>
+		</son>
+		<son picto="picto4" posPicto="49,73">
+			<swf>costume-v2/effet5_tumttt.swf</swf>
+			<mp3>sound-v2/effets/effet5_tumttt_a.mp3</mp3>
+			<mp3>sound-v2/effets/effet5_tumttt_b.mp3</mp3>
+		</son>
+
+
+		<son picto="picto5" posPicto="49,78">
+			<swf>costume-v2/beat1_boom.swf</swf>
+			<mp3>sound-v2/beats/beat1_boom_a.mp3</mp3>
+			<mp3>sound-v2/beats/beat1_boom_b.mp3</mp3>
+		</son>
+		<son picto="picto6" posPicto="49,78">
+			<swf>costume-v2/beat2_kashi.swf</swf>
+			<mp3>sound-v2/beats/beat2_kashi_a.mp3</mp3>
+		</son>
+		<son picto="picto7" posPicto="49,78">
+			<swf>costume-v2/beat3_paomeu.swf</swf>
+			<mp3>sound-v2/beats/beat3_paomeu_a.mp3</mp3>
+		</son>
+		<son picto="picto8" posPicto="49,78">
+			<swf>costume-v2/beat4_ptttpeu.swf</swf>
+			<mp3>sound-v2/beats/beat4_ptttpeu_a.mp3</mp3>
+			<mp3>sound-v2/beats/beat4_ptttpeu_b.mp3</mp3>
+		</son>
+		<son picto="picto9" posPicto="49,78">
+			<swf>costume-v2/beat5_slupttt.swf</swf>
+			<mp3>sound-v2/beats/beat5_slupttt_a.mp3</mp3>
+		</son>
+
+
+		<son picto="picto10" posPicto="49,59">
+			<swf>costume-v2/melo1_nananana.swf</swf>
+			<mp3>sound-v2/melodies/melo1_nananana_a.mp3</mp3>
+			<mp3>sound-v2/melodies/melo1_nananana_b.mp3</mp3>
+		</son>
+		<son picto="picto11" posPicto="49,59">
+			<swf>costume-v2/melo2_pelulu.swf</swf>
+			<mp3>sound-v2/melodies/melo2_pelulu_a.mp3</mp3>
+			<mp3>sound-v2/melodies/melo2_pelulu_b.mp3</mp3>
+		</son>
+		<son picto="picto12" posPicto="49,59">
+			<swf>costume-v2/melo3_siffle.swf</swf>
+			<mp3>sound-v2/melodies/melo3_siffle_a.mp3</mp3>
+			<mp3>sound-v2/melodies/melo3_siffle_b.mp3</mp3>
+		</son>
+		<son picto="picto13" posPicto="49,59">
+			<swf>costume-v2/melo4_tatouti.swf</swf>
+			<mp3>sound-v2/melodies/melo4_tatouti_a.mp3</mp3>
+			<mp3>sound-v2/melodies/melo4_tatouti_b.mp3</mp3>
+		</son>
+		<son picto="picto14" posPicto="49,59">
+			<swf>costume-v2/melo5_tvutvutvu.swf</swf>
+			<mp3>sound-v2/melodies/melo5_tvutvutvu_a.mp3</mp3>
+			<mp3>sound-v2/melodies/melo5_tvutvutvu_b.mp3</mp3>
+		</son>
+
+
+		<son picto="picto15" posPicto="49,61">
+			<swf>costume-v2/coeur1_oaaah.swf</swf>
+			<mp3>sound-v2/coeurs/coeur1_oaaah_a.mp3</mp3>
+			<mp3>sound-v2/coeurs/coeur1_oaaah_b.mp3</mp3>
+		</son>
+		<son picto="picto16" posPicto="49,61">
+			<swf>costume-v2/coeur2_cougou.swf</swf>
+			<mp3>sound-v2/coeurs/coeur2_cougou_a.mp3</mp3>
+			<mp3>sound-v2/coeurs/coeur2_cougou_b.mp3</mp3>
+		</son>
+		<son picto="picto17" posPicto="49,61">
+			<swf>costume-v2/coeur3_porticoeur.swf</swf>
+			<mp3>sound-v2/coeurs/coeur3_porticoeur_a.mp3</mp3>
+			<mp3>sound-v2/coeurs/coeur3_porticoeur_b.mp3</mp3>
+		</son>
+		<son picto="picto18" posPicto="49,69">
+			<swf>costume-v2/voix1_isit.swf</swf>
+			<mp3>sound-v2/voix/voix1_isit_a.mp3</mp3>
+			<mp3>sound-v2/voix/voix1_isit_b.mp3</mp3>
+		</son>
+		<son picto="picto19" posPicto="49,69">
+			<swf>costume-v2/voix2_uare.swf</swf>
+			<mp3>sound-v2/voix/voix2_uare_a.mp3</mp3>
+			<mp3>sound-v2/voix/voix2_uare_b.mp3</mp3>
+		</son>
+
+
+		<sonBonus picto="bonus0">
+			<mp3>sound-v2/bonus/aspire.mp3</mp3>
+		</sonBonus>
+		<sonBonus picto="bonus1">
+			<mp3>sound-v2/bonus/satisfy.mp3</mp3>
+		</sonBonus>
+		<sonBonus picto="bonus2">
+			<mp3>sound-v2/bonus/little-miss.mp3</mp3>
+		</sonBonus>
+		<sonBonus picto="bonus3">
+			<mp3>sound-v2/bonus/spinin.mp3</mp3>
+		</sonBonus>
+
+	</musique>
+
+	<pathBonus loop="4">
+		<swf code="0,3,5,8,11" visible="1" name="Satisfied">bonus-v2/are-you-satisfy.swf</swf>
+		<swf code="4,5,6,12,14" visible="1" name="Little Miss">bonus-v2/little-miss.swf</swf>
+		<swf code="5,7,8,13,17" visible="1" name="Why this world">bonus-v2/why-this-world.swf</swf>
+	</pathBonus>
+
+	<pathPicto>
+		<swf>picto-v2.swf</swf>
+	</pathPicto>
+
+	<pathIntro>
+		<swf>intro-v2.swf</swf>
+	</pathIntro>
+
+	<pathLogo>
+		<swf>logo-v2.swf</swf>
+	</pathLogo>
+
+</root>
